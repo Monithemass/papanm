@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> The digital portfolio</title>
+<style>
+   @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+marquee {
+  padding: 6px;
+  font-size: 30px;
+  letter-spacing: 4px;
+  word-spacing: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-style: italic;
+  text-shadow: 2px 2px 30px blue, 2px 2px 3px blue, 2px 2px 12px blue,
+    2px 2px 37px blue;
+}
+
+.ht {
+  text-align: center;
+  font-size: 37px;
+  font-weight: 400;
+}
+
+.data {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  word-spacing: 7px;
+  color: cornflowerblue;
+  text-shadow: 1px 1px 4px darkblue;
+}
+
+.star {
+  font-size: 15px;
+  color: white;
+}
+
+#myBtn {
+  display:block;
+  bottom: 15px;
+  right: 10px;
+  border: none;
+  outline: none;
+  background-color: blue;
+  position: fixed;
+  color: Aqua;
+  z-index: 99;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  transition: 2s;
+}
+#myBtn:hover {
+  background-color: hsl(0, 0%, 33%);
+}
+body {
+  background-color: black;
+  border: 3px double black;
+}
+article {
+  max-width: 600px;
+  margin: 1em auto;
+  overflow: hidden;
+  position: relative;
+  min-height: 4em;
+}
+
+.example-left {
+  white-space: nowrap;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.example-left {
+  -webkit-animation: mymove 8s linear infinite;
+  white-space: nowrap;
+  animation: mymove 8s linear infinite alternate;
+}
+@-webkit-keyframes mymove {
+  from {
+    left: 0;
+  }
+  to {
+    left: -140px;
+  }
+}
+@keyframes mymove {
+  from {
+    left: 0;
+  }
+  to {
+    left: -140px;
+  }
+}
+.example-right {
+  white-space: nowrap;
+  position: absolute;
+  top: 2em;
+  opacity: 0.4;
+  text-transform: uppercase;
+}
+.example-right {
+  -webkit-animation: urmove 8s linear infinite;
+  white-space: nowrap;
+  animation: urmove 8s linear infinite alternate;
+}
+@-webkit-keyframes urmove {
+  from {
+    right: 0;
+  }
+  to {
+    right: -140px;
+  }
+}
+@keyframes urmove {
+  from {
+    right: 0;
+  }
+  to {
+    right: -140px;
+  }
+}
+@keyframes early {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.early {
+  animation: fadeIn ease-in 1;
+
+  animation-fill-mode: forwards;
+
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+}
+.s5 {
+  color: blue;
+  font-size: 50px;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: gray;
+}
+.top-right {
+  position: absolute;
+  top: 140px;
+  right: 400px;
+}
+.s6 {
+  color: white;
+  border: 2px solid gray;
+  background-color: rgba(55, 56, 75, 0.849);
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 7px 5px 4px rgb(31, 16, 31), 1px 1px 1px rgb(31, 16, 31);
+}
+.s7 {
+  color: rgba(255, 255, 255, 0.986);
+  border: 2px solid gray;
+  background-color: rgba(55, 56, 75, 0.849);
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 7px 5px 4px rgb(31, 16, 31), 1px 1px 1px rgb(31, 16, 31);
+}
+
+#txt {
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.089);
+  position: relative;
+  top: 40px;
+  color: #555;
+  position: relative;
+  right: 190px;
+  letter-spacing: 2.1px;
+  word-spacing: 4px;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+span {
+  color: rgb(22, 13, 22);
+  font-weight: 500;
+  text-shadow: 1px 1px 1px rgba(32, 2, 2, 0.671);
+}
+
+img {
+  position: relative;
+  left: 480px;
+  filter: brightness(120%);
+  box-shadow: inset 1px 1px 100px white, inset 12px 12px 40px white,
+    inset 12px 12px 60px white, inset 1px 1px 80px white;
+}
+
+#game {
+  height: auto;
+  width: 80vh;
+}
+
+.popup {
+  background-color: #2f2f40;
+  width: 420px;
+  padding: 30px 40px;
+  position: relative;
+  left: 74%;
+  /* top: e28%; */
+  border-radius: 8px;
+  text-align: center;
+}
+
+#close {
+  display: block;
+  margin: 0 0 20px auto;
+  background: transparent;
+  font-size: 23px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: rgb(50, 106, 211);
+  color: white;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  margin-left: 10px;
+}
+
+#nxt {
+  color: rgba(255, 255, 255, 0.986);
+  letter-spacing: 1px;
+  border: none;
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 3px;
+  position: relative;
+  left: 120px;
+  background-color: #242DA2;
+}
+
+#here {
+  color: rgba(255, 255, 255, 0.986);
+  letter-spacing: 1px;
+  border: none;
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 3px;
+  position: relative;
+  left: 120px;
+  background-color: #242DA2;
+}
+
+</style>	
+</head>
+<body>
+  <marquee behavior="scroll" direction="left">
+<b style="color:white;font-size:40px;"><i>Welcome  To  My Site!!</i></b> </marquee>
+	<div class="container" style="border: 2px solid gray;" ><img src="bg.jpg" width="360" height="360">	
+ <div class="top-right"><b  ><i id="txt">I'm a future <span>web developer</span> </i></b></div></div>  
+<p style="color:black;">-</p> 
+<p class="s6"><b><i><b  style="color:gray;"></b><b class="ht" >About me</i></b></p>
+  <pre><div style="border-left:5px solid blue;background-color:#0d0d0d;">	
+	<b class="star" >&#9958;</b>    <b class="data" >I'm Monica from Koraikeni.</b>  	 	 
+	<b class="star" >&#9958;</b>    <b class="data" >I'm a BCA student at Siga college in Kappiyampuliyur.</b>					
+	<b class="star" >&#9958;</b>    <b class="data" >Born in 06/3/2023.</b>	 	 
+	<b class="star" >&#9958;</b>    <b class="data" >we are 4 at home.</b>					
+	<b class="star" >&#9958;</b>    <b class="data" ">I love my Family.</i></b>
+	<b style="color:#0d0d0d;"></b></pre></div>
+  <p class="s6"><b><i><b style="color:gray;""></b><b class="ht" ">Education</i></b></p>
+	<pre><div style="border-left:5px solid blue;background-color:#0d0d0d;">	
+	<b class="star" >&#9958;  </b>  <b class="data"> I finished my schooling in Goverment Higher Secondary School in Sithalampattu in 2021. </b>
+	
+	<b class="star" >&#9958; </b>   <b class="data">Current studying BCA at SIGA  college Annamalai University finishing  year 2024. </b>
+	</div></pre> 
+	<p class="s6"><b><i><b style="color:gray;"></b><b class="ht" >Interest</i></b></p>
+	<pre><div style="border-left:5px solid blue;background-color:#0d0d0d;">	  	 	 
+	<b class="star" >&#9958;</b>    <b class="data" >Creating crafts.</b>					
+	<b class="star" >&#9958;</b>    <b class="data" >Making websites.</b>  	 	 
+	<b class="star" >&#9958;</b>    <b class="data" >Drawing.					
+	<b style="color:#0d0d0d;"></b></pre></div>
+<p class="s6"><b><i><b style="color:gray;"></b><b class="ht" >Softskill</i></b></p>
+	<pre><div style="border-left:5px solid blue;background-color:#0d0d0d;">	
+	<b class="star" >&#9958;</b>    <b class="data" >playing chess.	</b>  	 	 
+	<b class="star" >&#9958;</b>    <b class="data" >watching series.</b>					
+	<b class="star" >&#9958;</b>    <b class="data" ">learning new things.</i></b>
+	<b style="color:#0d0d0d;"></b></pre></div>
+<p class="s6"><b><i><b style="color:gray;"></b><b class="ht">Hobbies</i></b></p>
+	<pre><div style="border-left:5px solid blue;background-color:#0d0d0d;">	
+	<b class="star" >&#9958;</b>    <b class="data" >Playing chess.</b>  	 	 
+	<b class="star" >&#9958;</b>    <b class="data" >Watching series.</b>					
+	<b class="star" >&#9958;</b>    <b class="data" >Learning new things.</i></b>
+	<b style="color:#0d0d0d;"></b></pre></div>
+<p class="s6"><b><i><b style="color:gray;"></b><b class="ht">Communication Launguage</i></b></p>
+	<pre><div style="border-left:5px solid blue;background-color:#0d0d0d;">	
+	<b class="star" >&#9958;</b>    <b class="data" >Tamil.</b>  	 	 
+	<b class="star" >&#9958;</b>    <b class="data" >English.</b>					</i></b>
+	<b style="color:#0d0d0d;"></b></pre></div>
+<p class="s6"><b><i><b style="color:gray;"></b><b class="ht">Programming Launguages</i></b></p>
+	<pre><div style="border-left:5px solid blue;background-color:#0d0d0d;">	
+	<b class="star" >&#9958;</b>    <b class="data" >C,C++,Java.</b>  	 	 
+	<b class="star" >&#9958;</b>    <b class="data" >HTML,CSS,JS.</b>					
+	<b class="star" >&#9958;</b>    <b class="data" >SQL.</i></b>
+	<b class="star" style="color:#0d0d0d;"></b></pre></div>
+<p class="s6"><b><i><b style="color:gray;"></b><b class="ht">Strengths</i></b></p>
+	<pre><div style="border-left:5px solid blue;background-color:#0d0d0d;">	
+	<b class="star" >&#9958;</b>    <b class="data" >I can learn anything Quick the help of my own interest.</b>
+	<b style="color:#0d0d0d;"></b></pre></div>
+<p class="s6"><b><i><b style="color:gray;"></b><b class="ht">Weakness</i></b></p>
+	<pre><div style="border-left:5px solid blue;background-color:#0d0d0d;">	
+	<b class="star" >&#9958;</b>    <b class="data" >I am a reserved person.</b></i></b>
+	<b style="color:#0d0d0d;"></b>
+</div></pre>
+<p class="s7"><b><i><b style="color:gray;"></b><b class="ht">Contact</i></b></p>
+	<pre><div style="border:10px ridge gray;background-color:#0d0d0d;">	
+				<b class="star" >&#9743;    <i class="data" >9361018639.</i> </b>
+				
+				<b class="star" >&#128233;  <i class="data" > monicaofcl@gmail.com.</i></b>
+				
+				 <b class="star" >f   <i class="data" >monipapa25.</i></b>
+				 
+</div></pre>
+<pre>
+
+</pre>
+
+<div id="game">
+
+	<div class="popup">
+	<button id="close">&times;</button>
+	<h1>Game</h1>
+	<p id="text">Guess number from 1 to 10</p>
+
+	  <ul type="none">
+        <li id="s1"></li>
+        <li id="s2"></li>
+        <li id="s3"></li>
+        <li id="s4"></li>
+        <li id="s5"></li>
+        <li id="s6"></li>
+      </ul>
+
+	 <button id="here">Belong</button>
+      <button id="nxt">Let's Go</button>
+	   <script src="script.js"></script>
+
+	   <script type="text/javascript">
+		document.querySelector("#close").addEventListener("click",
+       function()
+      {
+        document.querySelector(".popup").style.display="none";
+    }
+    );
+
+
+ </script>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">&uarr;</button>
+ <script>
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+var var1 = document.getElementById("s1");
+var var2 = document.getElementById("s2");
+var var3 = document.getElementById("s3");
+var var4 = document.getElementById("s4");
+var var5 = document.getElementById("s5");
+var var6 = document.getElementById("s6");
+
+var btn_present = document.getElementById("here");
+var btn_nxt = document.getElementById("nxt");
+
+let count = 1;
+let rst = 0;
+const key = [10, 20, 30, 50];
+
+const result = {
+  20: 1,
+  30: 2,
+  70: 3,
+  40: 5,
+  10: 6,
+  50: 7,
+  60: 8,
+  80: 9,
+  90: 10,
+  100: 3,
+};
+
+btn_present.style.visibility = "hidden";
+
+btn_nxt.addEventListener("click", perform);
+btn_present.addEventListener("click", guess);
+
+function guess() {
+  rst = rst + key[count - 2];
+  perform();
+}
+
+function perform() {
+  document.getElementById("text").innerHTML =
+    "Your Choiced Number Is Exist Go With Belong Or Else Continue Till End.";
+  btn_present.style.visibility = "visible";
+  btn_nxt.textContent = "Continue";
+  switch (count) {
+    case 1:
+      one();
+      ++count;
+      break;
+    case 2:
+      two();
+      ++count;
+      break;
+    case 3:
+      three();
+      ++count;
+      break;
+    case 4:
+      four();
+      ++count;
+      break;
+
+    default:
+      zero();
+        document.getElementById("text").innerHTML =
+          "I Guess You Choose " + result[rst];
+      if (count > 4) {
+        count = 1;
+        rst = 0;
+      }
+      break;
+  }
+}
+
+function one() {
+  var1.innerHTML = "2";
+  var2.innerHTML = "6";
+  var3.innerHTML = "5";
+  var4.innerHTML = "8";
+  var5.innerHTML = "10";
+  var6.innerHTML = " ";
+}
+
+function two() {
+  var1.innerHTML = "1";
+  var2.innerHTML = "2";
+  var3.innerHTML = "4";
+  var4.innerHTML = "3";
+  var5.innerHTML = " ";
+  var6.innerHTML = " ";
+}
+
+function three() {
+  var1.innerHTML = "5";
+  var2.innerHTML = "9";
+  var3.innerHTML = "10";
+  var4.innerHTML = "3";
+  var5.innerHTML = " ";
+  var6.innerHTML = " ";
+}
+
+function four() {
+  var1.innerHTML = "4";
+  var2.innerHTML = "7";
+  var3.innerHTML = "8";
+  var4.innerHTML = "9";
+  var5.innerHTML = "10";
+  var6.innerHTML = "3";
+}
+
+function zero() {
+  var1.innerHTML = " ";
+  var2.innerHTML = " ";
+  var3.innerHTML = " ";
+  var4.innerHTML = " ";
+  var5.innerHTML = " ";
+  var6.innerHTML = " ";
+}
+
+</script>
+</div>
+</body>
+</html>
